@@ -26,6 +26,6 @@ crop_8 =: (< (i.8);(i.8)) { ]
 
 gtMed =: median > ]
 
-grayscale =: [: <. +/ .*"1&0.2126 0.7152 0.0722
+grayscale =: ((0 & {) " 1) @: RGB_to_YUV
 
 phash =: gtMed @: , @: crop_8 @: dct @: resize_32 @: (7 medianf) @: grayscale
