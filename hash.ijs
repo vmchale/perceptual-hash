@@ -29,4 +29,4 @@ gtMed =: median > ]
 
 grayscale =: [: <. +/ .*"1&0.2126 0.7152 0.0722
 
-hash =: gtMed @: , @: crop_8 @: dct @: resize_32 @: (7 medianf) @: grayscale
+phash =: gtMed @: , @: crop_8 @: dct @: resize_32 @: (7 medianf) @: grayscale
