@@ -24,8 +24,6 @@ ind =. (<"0 szi%(32 32)) <.@*&.> <@i."0 (32 32)
 
 crop_8 =: (< (i.8);(i.8)) { ]
 
-gtMed =: median > ]
-
 grayscale =: ((0 & {) " 1) @: RGB_to_YUV
 
-phash =: gtMed @: , @: crop_8 @: dct @: resize_32 @: (7 medianf) @: grayscale
+phash =: (median > ]) @: , @: crop_8 @: dct @: resize_32 @: (7 medianf) @: grayscale
