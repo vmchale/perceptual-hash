@@ -26,4 +26,6 @@ crop_8 =: (< (i.8);(i.8)) { ]
 
 grayscale =: ((0 & {) " 1) @: RGB_to_YUV
 
+NB. median filter might be why it's slower
+NB. it seems to be more accurate though
 phash =: (median > ]) @: , @: crop_8 @: dct @: resize_32 @: (7 medianf) @: grayscale
